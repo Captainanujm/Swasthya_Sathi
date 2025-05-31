@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Doctor figure -->
+  <circle cx="100" cy="60" r="30" fill="#78b842" fill-opacity="0.3" stroke="#78b842" stroke-width="3"/>
+  
+  <!-- Doctor coat -->
+  <path d="M70 90 L70 160 L85 160 L85 130 L115 130 L115 160 L130 160 L130 90 C130 90, 120 110, 100 110 C80 110, 70 90, 70 90 Z" fill="white" stroke="#78b842" stroke-width="3"/>
+  
+  <!-- Stethoscope -->
+  <path d="M90 100 C70 100, 70 120, 50 120 C40 120, 40 130, 50 130 C65 130, 65 110, 90 110" fill="none" stroke="#0077a2" stroke-width="3"/>
+  <circle cx="50" cy="125" r="5" fill="#0077a2"/>
+  
+  <!-- Medical cross -->
+  <rect x="95" y="140" width="10" height="30" fill="#0077a2"/>
+  <rect x="85" y="150" width="30" height="10" fill="#0077a2"/>
+</svg> 

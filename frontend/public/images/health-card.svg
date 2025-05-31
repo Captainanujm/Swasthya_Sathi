@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card background -->
+  <rect x="30" y="50" width="140" height="100" rx="10" fill="white" stroke="#78b842" stroke-width="4"/>
+  
+  <!-- Photo placeholder -->
+  <circle cx="65" cy="100" r="20" fill="#78b842" fill-opacity="0.3" stroke="#78b842" stroke-width="2"/>
+  <path d="M65 85 C58 85, 53 91, 53 98 C53 105, 58 111, 65 111 C72 111, 77 105, 77 98 C77 91, 72 85, 65 85 Z" fill="none" stroke="#78b842" stroke-width="2"/>
+  <path d="M45 125 C45 115, 53 105, 65 105 C77 105, 85 115, 85 125" fill="none" stroke="#78b842" stroke-width="2"/>
+  
+  <!-- Card details -->
+  <line x1="95" y1="80" x2="155" y2="80" stroke="#78b842" stroke-width="2"/>
+  <line x1="95" y1="100" x2="155" y2="100" stroke="#78b842" stroke-width="2"/>
+  <line x1="95" y1="120" x2="155" y2="120" stroke="#78b842" stroke-width="2"/>
+  
+  <!-- Health symbol -->
+  <path d="M30 40 L45 40 L45 30 L55 30 L55 40 L70 40 L70 50 L55 50 L55 60 L45 60 L45 50 L30 50 Z" fill="#78b842"/>
+</svg> 

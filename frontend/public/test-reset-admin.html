@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Admin Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #c82333;
+        }
+        button.primary {
+            background-color: #0070f3;
+        }
+        button.primary:hover {
+            background-color: #0060df;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Reset Test Page</h1>
+    <p>Use these buttons to reset the admin user or test login:</p>
+    
+    <div>
+        <button id="resetAdmin">Reset Admin Now</button>
+        <button id="testLogin" class="primary">Test Admin Login</button>
+    </div>
+    
+    <pre id="result">Results will appear here...</pre>
+    
+    <script>
+        document.getElementById('resetAdmin').addEventListener('click', async () => {
+            try {
+                const resultElement = document.getElementById('result');
+                resultElement.textContent = 'Resetting admin...';
+                
+                const response = await fetch('http://localhost:5000/api/auth/reset-admin', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                resultElement.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('result').textContent = `Error: ${error.message}`;
+            }
+        });
+
+        document.getElementById('testLogin').addEventListener('click', async () => {
+            try {
+                const resultElement = document.getElementById('result');
+                resultElement.textContent = 'Testing admin login...';
+                
+                const credentials = {
+                    email: 'admin@healthcare.com',
+                    password: 'Admin@123'
+                };
+                
+                const response = await fetch('http://localhost:5000/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(credentials)
+                });
+                
+                const data = await response.json();
+                resultElement.textContent = JSON.stringify(data, null, 2);
+                
+                if (data.token) {
+                    localStorage.setItem('token', data.token);
+                    resultElement.textContent += '\n\nLogin successful! Token saved to localStorage.';
+                }
+            } catch (error) {
+                document.getElementById('result').textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html> 

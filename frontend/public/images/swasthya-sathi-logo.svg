@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle background -->
+  <circle cx="150" cy="150" r="145" fill="white" stroke="#0077a2" stroke-width="4"/>
+  
+  <!-- Medical cross symbol -->
+  <path d="M150 60 L150 240 M60 150 L240 150" stroke="#0077a2" stroke-width="15" stroke-linecap="round"/>
+  
+  <!-- Leaf symbol for wellness -->
+  <path d="M190 100 C240 100, 240 150, 190 150 C240 150, 240 200, 190 200 Z" fill="#78b842"/>
+  
+  <!-- Text: Swasthya Sathi -->
+  <text x="150" y="270" font-family="Arial" font-size="20" font-weight="bold" fill="#0077a2" text-anchor="middle">Swasthya Sathi</text>
+</svg> 

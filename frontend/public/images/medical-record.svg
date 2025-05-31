@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clipboard background -->
+  <rect x="40" y="20" width="120" height="160" rx="10" fill="white" stroke="#0077a2" stroke-width="4"/>
+  <rect x="60" y="10" width="80" height="20" rx="5" fill="#0077a2"/>
+  
+  <!-- Lines for text -->
+  <line x1="60" y1="60" x2="140" y2="60" stroke="#0077a2" stroke-width="3"/>
+  <line x1="60" y1="90" x2="140" y2="90" stroke="#0077a2" stroke-width="3"/>
+  <line x1="60" y1="120" x2="140" y2="120" stroke="#0077a2" stroke-width="3"/>
+  <line x1="60" y1="150" x2="140" y2="150" stroke="#0077a2" stroke-width="3"/>
+</svg> 

@@ -1,0 +1,24 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Microscope Base -->
+  <rect x="18" y="35" width="14" height="8" rx="2" fill="#3498db" />
+  <rect x="22" y="30" width="6" height="5" fill="#3498db" />
+  
+  <!-- Microscope Arm -->
+  <rect x="21" y="15" width="8" height="15" fill="#3498db" />
+  
+  <!-- Microscope Lens -->
+  <circle cx="25" cy="10" r="7" fill="#e74c3c" />
+  <circle cx="25" cy="10" r="4" fill="#f39c12" />
+  <circle cx="25" cy="10" r="2" fill="#ffffff" />
+  
+  <!-- Skin Cell -->
+  <circle cx="10" cy="15" r="6" fill="#f1c40f" opacity="0.7" />
+  <circle cx="15" cy="28" r="5" fill="#f1c40f" opacity="0.7" />
+  <circle cx="40" cy="20" r="7" fill="#f1c40f" opacity="0.7" />
+  <circle cx="35" cy="35" r="4" fill="#f1c40f" opacity="0.7" />
+
+  <!-- AI Symbol -->
+  <path d="M42 9C42 9 44 11 44 13C44 15 42 17 42 17" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" />
+  <path d="M38 5C38 5 36 7 36 9C36 11 38 13 38 13" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" />
+  <line x1="36" y1="9" x2="44" y2="9" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" />
+</svg> 
