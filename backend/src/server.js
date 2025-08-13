@@ -47,7 +47,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: [process.env.CLIENT_URL || 'http://localhost:5173', 'https://swasthya-sathi-seven.vercel.app'],
+    origin: ['https://swasthya-sathi-seven.vercel.app'],
     methods: ['GET', 'POST'],
     credentials: true
   }
@@ -55,18 +55,10 @@ const io = socketIo(server, {
 
 // Middleware
 app.use(cors({
-  origin: [
-    'http://localhost:5173', 
-    'http://localhost:5174', 
-    'http://localhost:5175', 
-    'http://127.0.0.1:5173', 
-    'http://127.0.0.1:5174', 
-    'http://127.0.0.1:5175',
-    'https://swasthya-sathi-seven.vercel.app'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  origin: '*', // Allow all origins temporarily for debugging
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'X-Requested-With', 'Accept'],
+  credentials: false // Set to false when using origin: '*'
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -85,9 +77,6 @@ app.use(fileUpload({
   safeFileNames: true,
   preserveExtension: true
 }));
-
-// Serve static files from uploads directory
-const uploadPath = process.env.FILE_UPLOAD_PATH || 'uploads';
 app.use('/uploads', express.static(path.join(__dirname, '..', uploadPath)));
 
 // Connect to MongoDB
