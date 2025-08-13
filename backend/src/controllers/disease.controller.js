@@ -23,7 +23,7 @@ exports.uploadImage = async (req, res) => {
 
     // Send image to Flask service for prediction
     const flaskResponse = await axios.post(
-      process.env.FLASK_API_URL || 'http://localhost:5001/predict',
+      'https://swasthya-sathi-6.onrender.com/predict',
       formData,
       {
         headers: {
@@ -156,7 +156,7 @@ exports.checkStatus = async (req, res) => {
   try {
     // Try to contact Flask service
     const response = await axios.get(
-      (process.env.FLASK_API_URL || 'http://localhost:5001/predict').replace('/predict', '/ping'),
+      ( 'https://swasthya-sathi-6.onrender.com/predict').replace('/predict', '/ping'),
       { timeout: 5000 }
     );
     

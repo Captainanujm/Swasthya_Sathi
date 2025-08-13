@@ -458,7 +458,8 @@ exports.uploadFile = async (req, res) => {
     await file.mv(filePath);
     
     // Generate file URL
-    const baseUrl = process.env.BASE_URL || `http://localhost:${process.env.PORT || 5000}`;
+    // const baseUrl = process.env.BASE_URL || `http://localhost:${process.env.PORT || 5000}`;
+    const baseUrl="https://swasthya-sathi-6.onrender.com";
     const fileUrl = `${baseUrl}/uploads/chat/${chatId}/${secureName}`;
     
     res.status(200).json({

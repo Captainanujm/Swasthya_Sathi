@@ -3,7 +3,7 @@ import { toast } from 'sonner';
 
 // Configure axios with base URL
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://swasthya-sathi-6.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
